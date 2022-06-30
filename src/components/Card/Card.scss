@@ -1,0 +1,34 @@
+.card-box {
+  text-align: left;
+  margin: 6px;
+  width: 45%;
+  padding: 10px;
+  background-color: #242526;
+  transition: transform 250ms;
+  color: #e4e6eb;
+
+  &:hover {
+    background-color: #57d6a3;
+    transform: translateY(-5px);
+    color: black;
+    a {
+      color: black;
+    }
+  }
+}
+
+.card-box a {
+  color: #e4e6eb;
+}
+
+.card-box h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 600px) {
+  .card-box {
+    width: 100%;
+  }
+}
