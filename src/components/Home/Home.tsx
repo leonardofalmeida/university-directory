@@ -55,6 +55,7 @@ const Home = () => {
   const debounceHandler = useCallback(debounce(searchItems, 300), []);
 
   const currentData = useMemo(() => {
+    if (!term) return [];
     const firstPageIndex = (currentPage - 1) * PAGE_SIZE;
     const lastPageIndex = firstPageIndex + PAGE_SIZE;
     return data.slice(firstPageIndex, lastPageIndex);
@@ -69,7 +70,7 @@ const Home = () => {
     return (
       <div className="list">
         {currentData.map(item => (
-          <Card item={item} />
+          <Card key={item.name + item.alpha_two_code} item={item} />
         ))}
       </div>
     );
