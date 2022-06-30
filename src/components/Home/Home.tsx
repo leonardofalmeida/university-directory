@@ -89,7 +89,10 @@ const Home = () => {
     if (showNotFoundList()) return <NotFoundList />;
   };
 
-  if (error) return <p>Something wrong happened, try again!</p>;
+  if (error)
+    return (
+      <h1 className="error">Something wrong happened, refresh the page!</h1>
+    );
 
   return (
     <div className="flex">
